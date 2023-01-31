@@ -12,6 +12,10 @@ module.exports = {
     extend: {
       fontFamily: {
         Nunito: ['var(--font-Nunito)']
+      },
+
+      gridTemplateColumns: {
+        fluid: "repeat(auto-fit, minmax(15rem, 1fr))"
       }
     },
   },

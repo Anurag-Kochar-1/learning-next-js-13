@@ -10,9 +10,11 @@ export default async function Home() {
 
   return (
     <main>
-      {res?.results?.map((movie) => {
-        return <Movie movie={movie} />
-      })}
+      <div className="grid gap-16 grid-cols-fluid">
+        {res?.results?.map((movie) => {
+          return <Movie key={movie.id} movie={movie} />
+        })}
+      </div>
 
     </main>
   )
