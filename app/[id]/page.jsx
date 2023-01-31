@@ -4,7 +4,7 @@ import React from 'react'
 const MoviePage = async ({ params }) => {
     const { id } = params
 
-    const data = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.NEXT_PUBLIC_TMDB_API_KEY}`)
+    const data = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.NEXT_PUBLIC_TMDB_API_KEY}`, {next: {revalidate: 0}})
     const res = await data.json()
 
 
